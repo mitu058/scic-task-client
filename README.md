@@ -4,7 +4,7 @@
 SCIC Assignment is a task management application that allows users to create, update, and manage tasks efficiently. The platform is built with a MERN (MongoDB, Express.js, React.js, Node.js) stack, ensuring a seamless user experience.
 
 ## Live Demo
-🔗 [SCIC Assignment Live](https://scic-assignment-9dcaa.web.app)
+🔗 [https://scic-task-743f3.web.app/](https://scic-task-743f3.web.app/)
 
 ## Features
 - User authentication and data management
@@ -36,7 +36,7 @@ Follow these steps to run the project locally:
    ```
    DB_USER=your_mongo_username
    DB_PASSWORD=your_mongo_password
-   PORT=7000
+   PORT=5000
    ```
 4. Start the backend server:
    ```bash
