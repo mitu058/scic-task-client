@@ -68,7 +68,7 @@ const Recorded = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-8 container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 mt-10 min-h-screen gap-8 container mx-auto">
         {/* To-Do Section */}
         {tasks.length > 0 ? (
           <>
@@ -270,7 +270,7 @@ const Recorded = () => {
           </>
         ) : (
           <>
-            <p className="m-5 font-bold">You have not add any task yet!</p>
+            <p className=" text-center font-bold">You have not add any task yet!</p>
           </>
         )}
       </div>
