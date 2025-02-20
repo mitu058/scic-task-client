@@ -6,10 +6,10 @@ import { GoTasklist } from "react-icons/go";
 const Dashboard = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   return (
-    <div className="flex">
+    <div className="flex ">
       <div  className={`${
-          isCollapsed ? "md:w-16 w-10" : "md:w-72 w-20 px-3"
-        } min-h-screen transition-all duration-300 bg-green-500 pt-5`}>
+          isCollapsed ? "md:w-16 w-10 my-16" : "md:w-72 my-16 w-20 px-3"
+        } h-68 transition-all duration-300 bg-fuchsia-800 pt-5`}>
         <button
           className={`${
             isCollapsed ? "justify-center" : "justify-end"
@@ -54,7 +54,7 @@ const Dashboard = () => {
           </NavLink>
         </div>
       </div>
-          <div className="flex-1">
+          <div className="flex-1 mx-6">
               <Outlet/>
       </div>
     </div>

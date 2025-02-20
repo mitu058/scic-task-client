@@ -86,7 +86,7 @@ const Add = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-green-500 cursor-pointer text-white px-4 py-2 rounded hover:bg-green-300 hover:text-gray-500"
+          className="w-full bg-fuchsia-700 cursor-pointer text-white px-4 py-2 rounded "
         >
           Add Task
         </button>
