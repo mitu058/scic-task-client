@@ -80,7 +80,7 @@ const Recorded = () => {
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <h1 className="bg-yellow-200 text-center py-2 font-bold rounded-md">
+                  <h1 className="bg-purple-200 text-center py-2 font-bold rounded-md">
                     To-Do
                   </h1>
                   <div className="my-2 space-y-3 cursor-pointer">
@@ -97,7 +97,7 @@ const Recorded = () => {
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
-                              className="bg-yellow-100 p-4 rounded-lg shadow-md"
+                              className="bg-purple-100 p-4 rounded-lg shadow-md"
                             >
                               <h2 className="text-lg font-semibold">
                                 {task.title}
@@ -210,7 +210,7 @@ const Recorded = () => {
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <h1 className="bg-green-200 text-center py-2 font-bold rounded-md">
+                  <h1 className="bg-orange-200 text-center py-2 font-bold rounded-md">
                     Done
                   </h1>
                   <div className="my-2 space-y-3 cursor-pointer">
@@ -227,7 +227,7 @@ const Recorded = () => {
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
-                              className="bg-green-100 p-4 rounded-lg shadow-md"
+                              className="bg-orange-100 p-4 rounded-lg shadow-md"
                             >
                               <h2 className="text-lg font-semibold">
                                 {task.title}
@@ -270,7 +270,7 @@ const Recorded = () => {
           </>
         ) : (
           <>
-            <p className="m-5">No task add here</p>
+            <p className="m-5 font-bold">You have not add any task yet!</p>
           </>
         )}
       </div>
