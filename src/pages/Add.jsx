@@ -45,7 +45,7 @@ const Add = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Title Input */}
         <div>
-          <label className="block font-semibold">Title (Max 50 chars):</label>
+          <label className="block font-semibold">Title</label>
           <input
             type="text"
             value={title}
@@ -59,7 +59,7 @@ const Add = () => {
         {/* Description Input */}
         <div>
           <label className="block font-semibold">
-            Description (Max 200 chars):
+            Description
           </label>
           <textarea
             value={description}
@@ -71,7 +71,7 @@ const Add = () => {
 
         {/* Category Select */}
         <div>
-          <label className="block font-semibold">Category:</label>
+          <label className="block font-semibold">Category</label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}

@@ -7,16 +7,19 @@ import Recorded from './../pages/Recorded';
 import Edit from '../pages/Edit';
 import Nothing from './../pages/Recorded';
 import PrivateRoute from './PrivateRoute';
+import Mainlayout from '../component/Mainlayout';
+import Home from '../component/Home';
 
 const Routes = () => {
     const route = new createBrowserRouter([
         {
             path: '/',
-            element: <Login/>
-        }, {
-            path: 'dashboard',
-            element: <PrivateRoute><Dashboard /></PrivateRoute>,
-            children: [
+            element: <Mainlayout></Mainlayout>,
+            children:[
+                {
+                    path:'/',
+                    element:<Home></Home>
+                },
                 {
                     path: 'add-task',
                     element: <PrivateRoute><Add/></PrivateRoute>
@@ -31,7 +34,16 @@ const Routes = () => {
                     loader: ({params}) => fetch(`${import.meta.env.VITE_URL}/tasks/${params.id}`) 
                 },
             ]
-        }
+        },
+        
+        // {
+        //     path: 'dashboard',
+        //     element: <PrivateRoute><Dashboard /></PrivateRoute>,
+        //     children: [
+              
+        //     ]
+        // }
+
     ])
     return (
         <RouterProvider router={route}/>

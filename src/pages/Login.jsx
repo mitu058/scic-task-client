@@ -25,15 +25,15 @@ const Login = () => {
     <div className="max-w-3xl mx-auto lg:mt-20 md:mt-12 mt-5 grid place-items-center space-y-2">
       <h1 className="text-3xl">
         Welcome to{" "}
-        <span className="font-semibold text-green-500">PlanSwift </span>
+        <span className="font-semibold text-fuchsia-700">TrackFlow  </span>
       </h1>
       <p className="w-1/2 text-center">
         Stay organized, boost productivity, and manage your tasks effortlessly.
-        Lets turn your to-do list into done! 🚀
+        Lets turn your to-do list into done! 
       </p>
       <button
         onClick={handelGoogleLogin}
-        className="flex cursor-pointer h-10 w- items-center justify-center gap-1 rounded-md bg-green-500 px-4 py-2 text-sm font-medium text-white"
+        className="flex cursor-pointer h-10 w- items-center justify-center gap-1 rounded-md bg-fuchsia-700 space-x-2 px-4 py-2 text-sm font-medium text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

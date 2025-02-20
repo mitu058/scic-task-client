@@ -68,7 +68,7 @@ const Recorded = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-8 container mx-auto">
         {/* To-Do Section */}
         {tasks.length > 0 ? (
           <>
