@@ -18,17 +18,18 @@ const Routes = () => {
                     element:<Home></Home>
                 },
                 {
-                    path: 'add-task',
+                    path: '/add-task',
                     element: <PrivateRoute><Add/></PrivateRoute>
                 },
                 {
-                    path: 'recorded-task',
+                    path: '/recorded-task',
                     element: <PrivateRoute><Recorded/></PrivateRoute>
                 },
                 {
-                    path: 'recorded-task/:id',
+                    path: '/recorded-task/:id',
                     element: <Edit />,
-                    loader: ({params}) => fetch(`${import.meta.env.VITE_URL}/tasks/${params.id}`) 
+                    loader: ({ params }) => fetch(`${import.meta.env.VITE_URL}/task/${params.id}`)
+
                 },
             ]
         },

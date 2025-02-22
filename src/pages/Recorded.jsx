@@ -6,6 +6,8 @@ import { RiDeleteBack2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { FormContext } from "../context/LoginContext";
+import { GoTrash } from "react-icons/go";
+import { FaRegEdit } from "react-icons/fa";
 
 const Recorded = () => {
   const { user, loading } = useContext(FormContext);
@@ -97,35 +99,35 @@ const Recorded = () => {
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
-                              className="bg-purple-100 p-4 rounded-lg shadow-md"
+                              className="bg-purple-100 space-y-1 p-4 rounded-lg shadow-md"
                             >
                               <h2 className="text-lg font-semibold">
                                 {task.title}
                               </h2>
-                              <p className="text-sm text-gray-600">
+                              <p className="text-base text-gray-600">
                                 {task.description}
                               </p>
-                              <p className="text-xs text-gray-500">
+                              <p className="text-base text-gray-500">
                                 {task.timestamp}
                               </p>
                               <div className="space-x-2 mt-2">
                                 <button>
                                   {" "}
                                   <Link
-                                    to={`/dashboard/recorded-task/${task._id}`}
+                                    to={`/recorded-task/${task._id}`}
                                     className="cursor-pointer"
                                   >
-                                    <BiMessageSquareEdit size={25} />
+                                <FaRegEdit className="text-lg text-blue-600"></FaRegEdit>
                                   </Link>
                                 </button>
                                 <button
                                   className="cursor-pointer"
                                   onClick={() => handelDeleteTask(task._id)}
                                 >
-                                  <RiDeleteBack2Line
-                                    size={25}
-                                    className="text-red-500"
-                                  />
+                                   <GoTrash className="text-lg text-red-600"></GoTrash>
+                                  
+                                   
+                                  
                                 </button>
                               </div>
                             </div>
@@ -162,35 +164,32 @@ const Recorded = () => {
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
-                              className="bg-blue-100 p-4 rounded-lg shadow-md"
+                              className="bg-blue-100 p-4 space-y-1 rounded-lg shadow-md"
                             >
                               <h2 className="text-lg font-semibold">
                                 {task.title}
                               </h2>
-                              <p className="text-sm text-gray-600">
+                              <p className="text-base text-gray-600">
                                 {task.description}
                               </p>
-                              <p className="text-xs text-gray-500">
+                              <p className="text-base text-gray-500">
                                 {task.timestamp}
                               </p>
-                              <div className="space-x-2 mt-2">
+                              <div className="space-x-2 mt-4">
                                 <button>
                                   {" "}
                                   <Link
-                                    to={`/dashboard/recorded-task/${task._id}`}
+                                    to={`/recorded-task/${task._id}`}
                                     className="cursor-pointer"
                                   >
-                                    <BiMessageSquareEdit size={25} />
+                                  <FaRegEdit className="text-lg text-blue-600"></FaRegEdit>
                                   </Link>
                                 </button>
                                 <button
                                   className="cursor-pointer"
                                   onClick={() => handelDeleteTask(task._id)}
                                 >
-                                  <RiDeleteBack2Line
-                                    size={25}
-                                    className="text-red-500"
-                                  />
+                                 <GoTrash className="text-lg text-red-600"></GoTrash>
                                 </button>
                               </div>
                             </div>
@@ -227,35 +226,33 @@ const Recorded = () => {
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
-                              className="bg-orange-100 p-4 rounded-lg shadow-md"
+                              className="bg-orange-100 p-4 space-y-1 rounded-lg shadow-md"
                             >
                               <h2 className="text-lg font-semibold">
                                 {task.title}
                               </h2>
-                              <p className="text-sm text-gray-600">
+                              <p className="text-base text-gray-600">
                                 {task.description}
                               </p>
-                              <p className="text-xs text-gray-500">
+                              <p className="text-base text-gray-500">
                                 {task.timestamp}
                               </p>
-                              <div className="space-x-2 mt-2">
-                                <button>
+                              <div className="space-x-2 mt-2 text-2xl">
+                                <button className="">
                                   {" "}
                                   <Link
-                                    to={`/dashboard/recorded-task/${task._id}`}
-                                    className="cursor-pointer"
+                                    to={`/recorded-task/${task._id}`}
+                                    className="cursor-pointer "
                                   >
-                                    <BiMessageSquareEdit size={25} />
+                                 <FaRegEdit className="text-lg text-blue-600"></FaRegEdit> 
                                   </Link>
                                 </button>
                                 <button
                                   className="cursor-pointer"
                                   onClick={() => handelDeleteTask(task._id)}
                                 >
-                                  <RiDeleteBack2Line
-                                    size={25}
-                                    className="text-red-500"
-                                  />
+                                   <GoTrash className="text-lg text-red-600"></GoTrash>
+                                   
                                 </button>
                               </div>
                             </div>
@@ -270,7 +267,9 @@ const Recorded = () => {
           </>
         ) : (
           <>
-            <p className=" text-center font-bold">You have not add any task yet!</p>
+            <p className=" text-center font-bold">
+              You have not add any task yet!
+            </p>
           </>
         )}
       </div>

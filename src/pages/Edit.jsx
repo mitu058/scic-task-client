@@ -5,7 +5,9 @@ import Swal from "sweetalert2";
 
 const Edit = () => {
   const data = useLoaderData();
-  const navigate = useNavigate(); // To navigate after the update
+  console.log(data)
+  const navigate = useNavigate(); 
+
 
   const handelUpdate = async (e) => {
     e.preventDefault();
@@ -15,8 +17,8 @@ const Edit = () => {
     const category = form.category.value;
     const updateObj = { title, description, category };
 
-    const response = await axios.patch(
-      `${import.meta.env.VITE_URL}/tasks/${data._id}`,
+    const response = await axios.put(
+      `${import.meta.env.VITE_URL}/update-task/${data._id}`,
       updateObj
     );
     if (response.data) {
@@ -30,7 +32,7 @@ const Edit = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-10">
+    <div className="max-w-2xl mx-auto mt-10 min-h-screen">
       <h1 className="text-2xl font-semibold text-center mb-5">Update Task</h1>
       <form onSubmit={handelUpdate} className="space-y-4">
         {/* Title Input */}
